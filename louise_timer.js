@@ -3,8 +3,6 @@ const http = require("http");
 const https = require("https");
 const client = new Discord.Client();
 
-const prefix = '!';
-
 client.on('ready', () => {
   var dateRaw = new Date();
   var dateString = dateRaw.toLocaleString();
@@ -13,9 +11,8 @@ client.on('ready', () => {
   //client.user.setPresence({ status: 'online', game: { name: "servir l'armée", type: 0 } });
 
   var twitter = "N'oubliez pas de me suivre sur Twitter ! <http://twitter.com/pixelouise> <:louise:382587451488600065>";
-
   setInterval(function(){
-    client.guilds.get("334111297740472322").channels.get("334111297740472322").send(twitter);
+    client.channels.get("334111297740472322").send(twitter);
     console.log(dateString + twitter);
   }, 1000*60*60*6);
 
