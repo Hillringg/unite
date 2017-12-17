@@ -11,7 +11,7 @@ client.on('ready', () => {
   //client.user.setPresence({ status: 'online', game: { name: "servir l'armée", type: 0 } });
 
   var twitter = "N'oubliez pas de me suivre sur Twitter ! <http://twitter.com/pixelouise> <:louise:382587451488600065>";
-  var pixelfranceGeneral = client.channels.get("345242294288384000");
+  var pixelfranceGeneral = client.channels.get("334111297740472322");
 
   function logAnnonce (annonce) {
     var dateRaw = new Date();
