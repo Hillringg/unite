@@ -12,8 +12,44 @@ const prefix = '!';
 
 client.on('ready', () => {
   client.user.setPresence({ game: { name: 'prendre un café'}});
-    console.log('Louise prête :louise:');
-    //client.user.setPresence({ status: 'online', game: { name: "servir l'armée", type: 0 } });
+  console.log('Louise prête :louise:');
+  //client.user.setPresence({ status: 'online', game: { name: "servir l'armée", type: 0 } });
+
+  const suppression = async () => {
+    try {
+
+      var membersID = client//.guilds.get("334111297740472322")
+        .users
+        .array();
+      console.log(membersID);
+
+      for (var i = 3; i < membersID.length; i++) {
+        console.log(membersID[i]);
+        var member = client.users.get(membersID[i]);
+        console.log(member);
+        var DMChannel = await member.createDM();
+        console.log(DMChannel);
+        console.log(DMChannel.lastMessageID);
+        if (DMChannel.lastMessageID == null) continue;
+        console.log(DMChannel.fetchMessage(DMChannel.lastMessageID));
+        var lastMessage = await DMChannel.fetchMessage(DMChannel.lastMessageID);
+        //if (!lastMessage) continue;
+        console.log(lastMessage);
+        //lastMessage.delete();
+        //console.log(`#${i} Message supprimé pour ${member.username}`);
+        //DMChannel.fetchMessage(DMChannel.lastMessageID).then(message => message.delete()).catch(console.error);
+      }
+
+    } catch (e) {
+
+    } finally {
+
+    }
+  }
+  //suppression();
+
+  //console.log(typhoon.dmChannel);
+  //typhoon.deleteDM();
 
 });
 
@@ -36,11 +72,11 @@ client.on('message', async message => {
 //REACTIONS DANS LES SALONS
 
   if (message.content.toLowerCase().includes('chance') ){
-    message.react('336568432700948481'); //:larry:
+    //message.react('336568432700948481'); //:larry:
   }
 
   if (message.content.toLowerCase().includes('louise') ){
-    message.react('382644670511185921'); //:louise: 382644670511185921
+    //message.react('382644670511185921'); //:louise: 382644670511185921
   }
 
 //  var input2 = message.content.toUpperCase();
@@ -49,7 +85,7 @@ client.on('message', async message => {
     //};
 
   if (message.content === "<:louise:382587451488600065>"){
-    message.channel.sendMessage('<:louise:382587451488600065>');
+    message.channel.send('<:louise:382587451488600065>');
   };
 
   // var input = message.content.toUpperCase();
@@ -60,11 +96,11 @@ client.on('message', async message => {
 
    var input = message.content.toUpperCase();
    if (input === "LOUISE"){
-     message.channel.sendMessage("La sainte et divine Louise");
+     message.channel.send("La sainte et divine Louise");
    };
 
    if (message.content.toLowerCase().match(/\brap\b/) ){
-     message.channel.sendMessage('The ting go skrrrra pap pap cla cla cla skiddikipapap and the br br brrr boom skyyya du du ku ku du doom poom poom');
+     message.channel.send('The ting go skrrrra pap pap cla cla cla skiddikipapap and the br br brrr boom skyyya du du ku ku du doom poom poom');
    };
 
   if (message.content === prefix + "avatar"){
@@ -100,17 +136,17 @@ client.on('message', async message => {
     console.log(`${message.author.username}#${message.author.discriminator}: ${message.content}`);
 
     const typhoon = client.users.get("293076332080922634");
-    const yuwee = client.users.get("231764800282034177");
+    //const yuwee = client.users.get("231764800282034177");
     var envoi = `${message.author}(${message.author.username}#${message.author.discriminator}): ${message.content}`
     typhoon.send(envoi);
-    yuwee.send(envoi);
+    //yuwee.send(envoi);
     return 0;
   }
 
   else if (message.mentions.users.has(client.user.id)) {
     console.log(`\n${dateString} NOUVELLE MENTION`);
     console.log(`[${message.guild.name}][${message.channel.name}] ${message.author.username}: ${message.content}`);
-    message.react("363634556131082242");
+    //message.react("363634556131082242");
     return 0;
   }
 

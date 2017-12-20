@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const http = require("http");
 const https = require("https");
 const client = new Discord.Client();
+const settings = require('../settings.json')
 
 client.on('ready', () => {
   var dateRaw = new Date();
@@ -54,4 +55,4 @@ client.on('ready', () => {
 
 });
 
-client.login('Mzc1ODA4Mjk2MTcyNjUwNTEw.DN1ORQ.oH1AuGaf3Q_D_K3bU5ifEM9j0YU');
+client.login(settings.louise);
