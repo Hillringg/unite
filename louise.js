@@ -4,6 +4,7 @@ const https = require("https");
 const client = new Discord.Client();
 const Cleverbot = require("cleverbot-node");
 const clbot = new Cleverbot;
+const settings = require('../settings.json')
 
 clbot.configure({botapi: "CC5ehFJkHVDXtn5xWK2FdJ1YfqA"});
 
@@ -123,4 +124,4 @@ client.on('message', async message => {
 
 });
 
-client.login('Mzc1ODA4Mjk2MTcyNjUwNTEw.DN1ORQ.oH1AuGaf3Q_D_K3bU5ifEM9j0YU');
+client.login(settings.louise);
