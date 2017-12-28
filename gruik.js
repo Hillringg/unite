@@ -4,7 +4,7 @@ const Cleverbot = require("cleverbot-node");
 const clbot = new Cleverbot;
 const prefix = "!";
 
-clbot.configure({botapi: "process.env.CLBOT_API"});
+clbot.configure({botapi: process.env.CLBOT_API});
 
 client.on('ready', () => {
   client.user.setPresence({ game: { name: 'discord.io/PixelGroin'}});
