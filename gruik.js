@@ -4,7 +4,7 @@ const Cleverbot = require("cleverbot-node");
 const clbot = new Cleverbot;
 const prefix = "!";
 
-clbot.configure({botapi: "CLBOT_API"});
+clbot.configure({botapi: "process.env.CLBOT_API"});
 
 client.on('ready', () => {
   client.user.setPresence({ game: { name: 'discord.io/PixelGroin'}});
@@ -117,4 +117,4 @@ if (message.content.includes("394197232607559680")) {
 });
 
 ///////////////////////////////////////////////////////////////////////////////
-client.login("BOT_TOKEN");
+client.login("process.env.BOT_TOKEN");
