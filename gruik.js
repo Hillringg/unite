@@ -117,4 +117,4 @@ if (message.content.includes("394197232607559680")) {
 });
 
 ///////////////////////////////////////////////////////////////////////////////
-client.login("process.env.BOT_TOKEN");
+client.login("Mzk0MTk3MjMyNjA3NTU5Njgw.DSA0Tw.H28lFYgwaZOVqCwsgwN2UDvXIm8");
