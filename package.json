@@ -1,0 +1,17 @@
+{
+  "name": "botproject",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "cleverbot-node": "^0.3.11",
+    "discord.js": "^11.2.1",
+    "semver": "^5.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
