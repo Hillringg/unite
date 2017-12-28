@@ -1,9 +1,6 @@
 {
   "name": "botproject",
   "version": "1.0.0",
-    "engines": {
-    "node": "v8.0.0"
-  }
   "description": "",
   "main": "main.js",
   "dependencies": {
@@ -16,4 +13,7 @@
   },
   "author": "",
   "license": "ISC"
-}
+ "engines": {
+  "node": "8.0.0"
+   }
+},
