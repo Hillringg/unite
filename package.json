@@ -1,13 +1,15 @@
 {
   "name": "botproject",
+    "engines": {
+    "node": ">=8.0.0"
+  },
+  "engineStrict": true
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "dependencies": {
     "cleverbot-node": "^0.3.11",
     "discord.js": "^11.2.1"
-    "engines": {
-    "node": "8.0.0",
   }
   },
   "devDependencies": {},
