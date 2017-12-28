@@ -6,6 +6,9 @@
   "dependencies": {
     "cleverbot-node": "^0.3.11",
     "discord.js": "^11.2.1"
+    "engines": {
+    "node": "8.0.0",
+  }
   },
   "devDependencies": {},
   "scripts": {
@@ -13,7 +16,4 @@
   },
   "author": "",
   "license": "ISC"
-  "engines": {
-    "node": "6.11.1"
-  }
 },
