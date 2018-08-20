@@ -134,4 +134,4 @@ if (message.content.includes("376145584970792960")) {
 
 });
 ///////////////////////////////////////////////////////////////////////////////
-client.login("process.env.BOT_TOKEN");
+client.login(process.env.BOT_TOKEN);
