@@ -134,4 +134,4 @@ if (message.content.includes("376145584970792960")) {
 
 });
 ///////////////////////////////////////////////////////////////////////////////
-client.login("NDgxMTA0MTMxMDgwMTkyMDEw.DlxfBg.Uqia4FMl49h9nlmR4_U9OHqlUJo");
+client.login("process.env.BOT_TOKEN");
