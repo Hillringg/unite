@@ -1,1 +1,1 @@
-worker: node gruik.js
+worker: node unite.js
