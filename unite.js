@@ -130,6 +130,46 @@ if (message.content.includes("376145584970792960")) {
     }, Math.random() * (1 - 3) + 1 * 1000);
   });
 }
+  
+      if (message.author.bot) return;
+
+    let msg = message.content.toUpperCase();
+    let cont = message.content.slice(prefix.length).split(" ");
+    let sender = message.author;
+    let args = cont.slice(1);
+    
+    if (msg.startsWith(prefix + 'PURGE')) {
+        async function purge() {
+            message.delete();
+       
+          if (!message.member.roles.find("name", "Game Master")) {
+            message.chanel.send('You need the permission to perform this action.'); 
+            return;
+          }
+
+
+          if (isNaN(args[0])) {
+
+            message.channel.send('Please supply a valid amount of message to purge');
+            
+            return;
+          }
+
+          if (args[0] > 100) return message.channel.send('*Plesse supply a number less than 100*');
+
+          const fetched = await message.channel.fetchMessages({limit: args[0]});
+          console.log(fetched.size + ' messages found, deleting...');
+
+          message.channel.bulkDelete(fetched)
+       //    .then( message => message.channel.send(`**Successfully deleted \`${message.size}/${args[0]}\` messages**`).then( msg => msg.delete({timeout: 1000})))
+           .catch(error => message.channel.send(`Error ${error}`));
+
+       }
+
+      purge(); 
+
+
+    }
 
 
 });
