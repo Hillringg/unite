@@ -155,7 +155,7 @@ if (msg.startsWith(prefix + 'PURGE')) {
         return;
       }
 
-      if (args[0] > 100) return message.channel.send('*Plesse supply a number less than 100*');
+      if (args[0] > 100) return message.channel.send('Please supply a number less than 100');
 
       const fetched = await message.channel.fetchMessages({limit: args[0]});
       console.log(fetched.size + ' messages found, deleting...');
