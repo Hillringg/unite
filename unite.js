@@ -44,7 +44,7 @@ client.on('guildMemberAdd', member => {
 
 client.on('guildMemberAdd', member => {
 
-  console.log(`${member}`, "has joined" + `$member.guild.name`)
+  console.log(`${member}`, "has joined" + `${member.guild.name}`)
 });
 
 
