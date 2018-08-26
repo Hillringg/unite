@@ -44,7 +44,7 @@ client.on('guildMemberAdd', member => {
 
 client.on('guildMemberAdd', member => {
 
-  console.log(`${member}`, "has joined" + `${member.guild.name}`)
+  console.log(`${member}`, "has joined" + `$member.guild.name`)
 });
 
 
@@ -155,14 +155,14 @@ if (msg.startsWith(prefix + 'PURGE')) {
         return;
       }
 
-      if (args[0] > 100) return message.channel.send('Please supply a number less than 100');
+      if (args[0] > 100) return message.channel.send('*Plesse supply a number less than 100*');
 
       const fetched = await message.channel.fetchMessages({limit: args[0]});
       console.log(fetched.size + ' messages found, deleting...');
 
       message.channel.bulkDelete(fetched)
    //    .then( message => message.channel.send(`**Successfully deleted \`${message.size}/${args[0]}\` messages**`).then( msg => msg.delete({timeout: 1000})))
-       .catch(error => message.channel.send(`Error ${error}`));
+   //    .catch(error => message.channel.send(`Error ${error}`));
 
    }
 
@@ -170,6 +170,7 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 
 }
+
 
 
 
