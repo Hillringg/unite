@@ -171,7 +171,51 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 }
 
+///////// AUTO ROLE COMMAND /////////
 
+
+// AUTO ROLES //
+
+if (message.channel.id === '524704820162985996') {
+  message.delete();
+}
+
+
+if (message.content === "Join AoL") {
+  message.reply('Your roles have been updated')
+  .then(message => {
+  message.delete(10000)
+  })
+  message.member.addRole('524307136398753794');
+  message.delete();
+}
+
+if (message.content === "Leave AoL") {
+  message.reply('Your roles have been updated')
+  .then(message => {
+  message.delete(10000)
+  })
+  message.member.removeRole('524307136398753794');
+  message.delete();
+}
+
+if (message.content === "Join UoF") {
+  message.reply('Your roles have been updated')
+  .then(message => {
+  message.delete(10000)
+  })
+  message.member.addRole('524705965656899595');
+  message.delete();
+}
+
+if (message.content === "Leave UoF") {
+  message.reply('Your roles have been updated')
+  .then(message => {
+  message.delete(10000)
+  })
+  message.member.removeRole('524705965656899595');
+  message.delete();
+}
 
 
 
