@@ -220,13 +220,13 @@ if (message.content === "Leave UoF") {
 // AUTO REACT //
 
 
-if (message.channel.id === '525441866372743171') {
+if (message.channel.id === '521796460698796043') {
   message.react('👍');
  // message.react('👎');
  // message.react('🤷');
 }
 
-if (message.channel.id === '525441866372743171') {
+if (message.channel.id === '521796460698796043') {
   setTimeout (function(){
       message.react('👎');
   }, 1000);
