@@ -217,7 +217,29 @@ if (message.content === "Leave UoF") {
   message.delete();
 }
 
+// AUTO REACT //
 
+
+if (message.channel.id === '525441866372743171') {
+  message.react('👍');
+ // message.react('👎');
+ // message.react('🤷');
+}
+
+if (message.channel.id === '525441866372743171') {
+  setTimeout (function(){
+      message.react('👎');
+  }, 1000);
+  
+}
+
+if (message.channel.id === '525441866372743171') {
+setTimeout (function(){
+  message.react('🤷');
+}, 2000);
+
+}
+  
 
 });
 ///////////////////////////////////////////////////////////////////////////////
