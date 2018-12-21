@@ -13,7 +13,7 @@ const activities_list = [
   "Any questions? Please use the #support channel", 
   ]; 
 
-client.on('ready', () => {
+client.on('ready', () {
   setInterval(function() => {
       const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); 
       client.user.setActivity(activities_list[index]);
