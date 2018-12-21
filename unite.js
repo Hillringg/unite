@@ -7,19 +7,17 @@ const prefix = "!";
 clbot.configure({botapi: "CC5ehFJkHVDXtn5xWK2FdJ1YfqA"});
 
 const activities_list = [
-    "ShaiyaUnite.org", 
-    "Don't forget to vote.",
-    "Assign your faction role in #role-assignment.", 
-    "Any questions? Please use the #support channel", 
-    ]; 
+  "ShaiyaUnite.org", 
+  "Don't forget to vote.",
+  "Assign your faction role in #role-assignment.", 
+  "Any questions? Please use the #support channel", 
+  ]; 
 
 client.on('ready', () => {
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // 
-        client.user.setActivity(activities_list[index]); // 
-    }, 5000); 
-    
-    console.log('Bot activated');
+  setInterval(() => {
+      const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); .
+      client.user.setActivity(activities_list[index]);
+  }, 10000);
 });
 
 
