@@ -18,6 +18,8 @@ client.on('ready', () => {
       const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); 
       client.user.setActivity(activities_list[index]);
   }, 10000);
+  
+  console.log('Bot activated');
 });
 
 
