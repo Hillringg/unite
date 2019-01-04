@@ -237,6 +237,31 @@ setTimeout (function(){
 }, 2000);
 
 }
+ 
+
+  
+  
+  if (message.channel.id === '529299708779429950') {
+  message.react('👍');
+ // message.react('👎');
+ // message.react('🤷');
+}
+
+if (message.channel.id === '529299708779429950') {
+  setTimeout (function(){
+      message.react('👎');
+  }, 1000);
+  
+}
+
+if (message.channel.id === '529299708779429950') {
+setTimeout (function(){
+  message.react('🤷');
+}, 2000);
+
+}
+  
+  
   
 
 });
