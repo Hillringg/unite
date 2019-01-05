@@ -100,7 +100,7 @@ if (message.content === prefix + "avatar"){
   var avatar_embed = new Discord.RichEmbed()
     .setAuthor(message.author.username, message.author.avatarURL)
     .setTitle('Avatar')
-    .setColor('#E87474')
+    .setColor('#2ECC71')
     .setImage(message.author.avatarURL)
     message.channel.sendEmbed(avatar_embed);
  return;
@@ -111,7 +111,7 @@ if (message.content.includes('!avatar')) {
   var avatar2_embed = new Discord.RichEmbed()
     .setAuthor(TaggedUser.username, TaggedUser.avatarURL)
     .setTitle('Avatar')
-    .setColor('#E87474')
+    .setColor('#2ECC71')
     .setImage(TaggedUser.avatarURL)
     message.channel.sendEmbed(avatar2_embed);
 
