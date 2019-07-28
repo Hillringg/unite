@@ -252,7 +252,9 @@ if(message.content.toLowerCase().includes('website') ){
 
 }
 
-
+if (message.content === 'test') ({
+message.channel.sendMessage('test');
+}
 
 });
 ///////////////////////////////////////////////////////////////////////////////
