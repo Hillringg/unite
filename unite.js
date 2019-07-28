@@ -49,7 +49,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('guildMemberAdd', member => {
-  let channel = member.guild.channels.find('name', '🥳welcome');
+  let channel = member.guild.channels.find('name', 'welcome');
   if (!channel) return;
 
   let weeb = new Discord.RichEmbed()
