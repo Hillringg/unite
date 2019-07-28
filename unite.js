@@ -92,16 +92,9 @@ client.on('message', async message => {
 
 ///////////////////////////////////////////
   
-    if (message.content.startsWith("ping")) {
-    message.channel.send("pong!");
-  }
+if (msg.startsWith(prefix + 'WEBSITE')) {
+message.channel.send('Please supply a valid amount of message to purge');
 
-
-if (message.content === '!website') {
-  message.channel.send('https://shaiyakudos.com');
-
-  return;
-}
   
   
 
