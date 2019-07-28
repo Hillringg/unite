@@ -170,7 +170,7 @@ if (msg.startsWith(prefix + 'PURGE')) {
 }
 
 if (message.content.toLowerCase().includes('droplist') ){
-  message.channel.sendMessage("https://shaiyakudos.com/guide/gameguide.php");
+  message.reply("https://shaiyakudos.com/guide/gameguide.php");
 
 }
 
@@ -181,13 +181,14 @@ if (message.content.toLowerCase().includes('website') ){
 }
 
 if (message.content === prefix + "droplist"){
-message.channel.send("https://shaiyakudos.com/guide/gameguide.php");
+message.reply("https://shaiyakudos.com/guide/gameguide.php");
 }
 
 
 if (message.content === prefix + "website"){
-message.channel.send("https://shaiyakudos.com");
+message.reply("https://shaiyakudos.com");
 }
+
 
 
 
