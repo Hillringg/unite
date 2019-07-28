@@ -91,6 +91,19 @@ client.on('message', async message => {
   if (message.author.bot) return;
 
 ///////////////////////////////////////////
+  
+    if (message.content.startsWith("ping")) {
+    message.channel.send("pong!");
+  }
+
+
+if (message.content === '!website') {
+  message.channel.send('https://shaiyakudos.com');
+
+  return;
+}
+  
+  
 
 // Avatar commande //
 
@@ -170,12 +183,6 @@ if (msg.startsWith(prefix + 'PURGE')) {
 }
 
 
-
-if (message.content === '!website') {
-  message.channel.send('https://shaiyakudos.com');
-
-  return;
-}
 
 ///////// AUTO ROLE COMMAND /////////
 
