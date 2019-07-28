@@ -169,24 +169,8 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 }
 
-if (message.content.toLowerCase().includes('droplist') ){
-  message.reply("https://shaiyakudos.com/guide/gameguide.php");
-
-}
-
-
-if (message.content.toLowerCase().includes('website') ){
-  message.channel.sendMessage("https://shaiyakudos.com");
-
-}
-
-if (message.content === prefix + "droplist"){
-message.reply("https://shaiyakudos.com/guide/gameguide.php");
-}
-
-
-if (message.content === prefix + "website"){
-message.reply("https://shaiyakudos.com");
+if (message.content === "Bienvenue dans l'Armée Française") {
+message.channel.sendMessage('Bienvenue !')
 }
 
 
