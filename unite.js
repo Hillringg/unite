@@ -165,18 +165,18 @@ if (msg.startsWith(prefix + 'PURGE')) {
    }
 
   purge(); 
-  
-  
-  
-  
-  if(message.content.toLowerCase().includes('droplist') ){
-    message.channel.sendMessage("https://shaiyakudos.com/guide/gameguide.php");
+
 
 }
-  
 
-if(message.content.toLowerCase().includes('website') ){
-    message.channel.sendMessage("https://shaiyakudos.com");
+if (message.content.toLowerCase().includes('droplist') ){
+  message.channel.sendMessage("https://shaiyakudos.com/guide/gameguide.php");
+
+}
+
+
+if (message.content.toLowerCase().includes('website') ){
+  message.channel.sendMessage("https://shaiyakudos.com");
 
 }
 
@@ -184,13 +184,12 @@ if (message.content === prefix + "droplist"){
 message.channel.send("https://shaiyakudos.com/guide/gameguide.php");
 }
 
-  
-  if (message.content === prefix + "website"){
+
+if (message.content === prefix + "website"){
 message.channel.send("https://shaiyakudos.com");
 }
 
 
-}
 
 ///////// AUTO ROLE COMMAND /////////
 
@@ -265,9 +264,7 @@ setTimeout (function(){
   
 
 
-  
-  
-  
+
 });
 ///////////////////////////////////////////////////////////////////////////////
 client.login(process.env.BOT_TOKEN);
