@@ -28,10 +28,10 @@ client.on('guildMemberAdd', member => {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(`${member.user.avatarURL}`)
-      .addField(':bust_in_silhouette: | name : ', `${member}`)
-      .addField(':microphone2: | Welcome!', `Welcome to the server, ${member}`)
+      .addField('name : ', `${member}`)
+      .addField(' Welcome!', `Welcome to the server, ${member}`)
       .addField(':id: | User :', "**[" + `${member.id}` + "]**")
-      .addField(':family_mwgb: | You are the member', `${member.guild.memberCount}`)
+      .addField('Is the member', `${member.guild.memberCount}`)
       .addField("Name", `<@` + `${member.id}` + `>`, true)
       .addField('Server', `${member.guild.name}`, true)
       .setFooter(`${member.guild.name}`)
@@ -53,17 +53,17 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
 
   let weeb = new Discord.RichEmbed()
-    .setAuthor("Unite Bot", "https://i.imgur.com/oWBMCKP.png")
+    .setAuthor("Kudos Bot", "https://i.imgur.com/bIqUl11.png")
 //    .setAuthor(member.guild.get("481104131080192010").avatarURL)
 //    .setAuthor(client.users.get("481104131080192010").avatarURL)
 //  .setAuthor(member.user.username, member.user.avatarURL)
   .setTitle('Greetings adventurers!')
   .setColor('#F5DEA4')
   .setThumbnail(`${member.user.avatarURL}`)
-  .setDescription(`Welcome to the official Shaiya Unite Discord server, ${member.user.username}!
+  .setDescription(`Welcome to the official Shaiya Kudos Discord server, ${member.user.username}!
 Please make sure to read #rules-and-info.
 If you have any questions do not hesitate to use the #support channel.`)
-  .setFooter('Shaiya Unite')
+  .setFooter('Shaiya Kudos')
   .setTimestamp()
 
 channel.send(weeb);
@@ -174,7 +174,7 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 // AUTO ROLES //
 
-if (message.channel.id === '524704820162985996') {
+if (message.channel.id === '605021735997276164') {
   message.delete();
 }
 
@@ -184,7 +184,7 @@ if (message.content === "Join AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('524307136398753794');
+  message.member.addRole('605016568581324810');
   message.delete();
 }
 
@@ -193,7 +193,7 @@ if (message.content === "Leave AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('524307136398753794');
+  message.member.removeRole('605016568581324810');
   message.delete();
 }
 
@@ -202,7 +202,7 @@ if (message.content === "Join UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('524705965656899595');
+  message.member.addRole('605016411370160145');
   message.delete();
 }
 
@@ -211,58 +211,48 @@ if (message.content === "Leave UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('524705965656899595');
+  message.member.removeRole('605016411370160145');
   message.delete();
 }
 
 // AUTO REACT //
 
 
-if (message.channel.id === '521796460698796043') {
+if (message.channel.id === '602267275831017472') {
   message.react('👍');
  // message.react('👎');
  // message.react('🤷');
 }
 
-if (message.channel.id === '521796460698796043') {
+if (message.channel.id === '602267275831017472') {
   setTimeout (function(){
       message.react('👎');
   }, 1000);
   
 }
 
-if (message.channel.id === '521796460698796043') {
+if (message.channel.id === '602267275831017472') {
 setTimeout (function(){
   message.react('🤷');
 }, 2000);
 
 }
  
-
+if (message.content === prefix + droplist)
   
-  
-  if (message.channel.id === '529299708779429950') {
-  message.react('👍');
- // message.react('👎');
- // message.react('🤷');
-}
 
-if (message.channel.id === '529299708779429950') {
-  setTimeout (function(){
-      message.react('👎');
-  }, 1000);
-  
-}
-
-if (message.channel.id === '529299708779429950') {
-setTimeout (function(){
-  message.react('🤷');
-}, 2000);
+if(message.content.toLowerCase().includes('droplist') ){
+    message.channel.sendMessage("https://shaiyakudos.com/guide/gameguide.php");
 
 }
   
-  
-  
+
+if(message.content.toLowerCase().includes('website') ){
+    message.channel.sendMessage("https://shaiyakudos.com");
+
+}
+
+
 
 });
 ///////////////////////////////////////////////////////////////////////////////
