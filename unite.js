@@ -169,10 +169,10 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 }
 
-if (message.content === "Bienvenue dans l'Armée Française") {
-message.channel.sendMessage('Bienvenue !')
-}
+if (message.content.includes('!website')) {
+    message.channel.sendMessage('https://shaiyakudos.com');
 
+}
 
 
 
