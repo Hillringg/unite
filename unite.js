@@ -252,10 +252,17 @@ if(message.content.toLowerCase().includes('website') ){
 
 }
 
-if (message.content === 'test') ({
-message.channel.sendMessage('test');
+if (message.content === prefix + "droplist"){
+message.channel.send("https://shaiyakudos.com/guide/gameguide.php");
 }
 
+  
+  if (message.content === prefix + "website"){
+message.channel.send("https://shaiyakudos.com");
+}
+  
+  
+  
 });
 ///////////////////////////////////////////////////////////////////////////////
 client.login(process.env.BOT_TOKEN);
