@@ -169,12 +169,13 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 }
 
-if (message.content.includes('!website')) {
-    message.channel.sendMessage('https://shaiyakudos.com');
 
+
+if (message.content === '!website') {
+  message.channel.send('https://shaiyakudos.com');
+
+  return;
 }
-
-
 
 ///////// AUTO ROLE COMMAND /////////
 
