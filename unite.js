@@ -53,7 +53,7 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
 
   let weeb = new Discord.RichEmbed()
-    .setAuthor("Kudos Bot", "https://i.imgur.com/iR0QCin.png")
+    .setAuthor("Wrath Bot", "https://i.imgur.com/iR0QCin.png")
 //    .setAuthor(member.guild.get("481104131080192010").avatarURL)
 //    .setAuthor(client.users.get("481104131080192010").avatarURL)
 //  .setAuthor(member.user.username, member.user.avatarURL)
