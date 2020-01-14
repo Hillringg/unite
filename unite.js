@@ -91,12 +91,6 @@ client.on('message', async message => {
   if (message.author.bot) return;
 
 ///////////////////////////////////////////
-  
-if (msg.startsWith(prefix + 'WEBSITE')) {
-message.channel.send('Please supply a valid amount of message to purge');
-
-  
-  
 
 // Avatar commande //
 
@@ -106,7 +100,7 @@ if (message.content === prefix + "avatar"){
   var avatar_embed = new Discord.RichEmbed()
     .setAuthor(message.author.username, message.author.avatarURL)
     .setTitle('Avatar')
-    .setColor('#2ECC71')
+    .setColor('#E87474')
     .setImage(message.author.avatarURL)
     message.channel.sendEmbed(avatar_embed);
  return;
@@ -117,7 +111,7 @@ if (message.content.includes('!avatar')) {
   var avatar2_embed = new Discord.RichEmbed()
     .setAuthor(TaggedUser.username, TaggedUser.avatarURL)
     .setTitle('Avatar')
-    .setColor('#2ECC71')
+    .setColor('#E87474')
     .setImage(TaggedUser.avatarURL)
     message.channel.sendEmbed(avatar2_embed);
 
@@ -147,7 +141,7 @@ if (msg.startsWith(prefix + 'PURGE')) {
         message.delete();
    
       if (!message.member.roles.find("name", "Game Master")) {
-        message.channel.send('You need the permission to perform this action.'); 
+        message.chanel.send('You need the permission to perform this action.'); 
         return;
       }
 
@@ -175,8 +169,6 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 }
 
-
-
 ///////// AUTO ROLE COMMAND /////////
 
 
@@ -192,7 +184,7 @@ if (message.content === "Join AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('605016568581324810');
+  message.member.addRole('524307136398753794');
   message.delete();
 }
 
@@ -201,7 +193,7 @@ if (message.content === "Leave AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('605016568581324810');
+  message.member.removeRole('524307136398753794');
   message.delete();
 }
 
@@ -210,7 +202,7 @@ if (message.content === "Join UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('605016411370160145');
+  message.member.addRole('524705965656899595');
   message.delete();
 }
 
@@ -219,7 +211,7 @@ if (message.content === "Leave UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('605016411370160145');
+  message.member.removeRole('524705965656899595');
   message.delete();
 }
 
@@ -245,9 +237,19 @@ setTimeout (function(){
 }, 2000);
 
 }
- 
-
   
+
+//MUTE///
+
+
+if (msg.startsWith(prefix + 'MUTE')) {
+ message.mentions.members.first().addRole('481574554330726422');
+ message.channel.send('This user has been muted.');
+}
+
+
+
+
 
 
 
