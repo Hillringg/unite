@@ -182,7 +182,7 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 // AUTO ROLES //
 
-if (message.channel.id === '605021735997276164') {
+if (message.channel.id === '666712705033568287') {
   message.delete();
 }
 
@@ -226,20 +226,20 @@ if (message.content === "Leave UoF") {
 // AUTO REACT //
 
 
-if (message.channel.id === '602267275831017472') {
+if (message.channel.id === '666712746024239104') {
   message.react('👍');
  // message.react('👎');
  // message.react('🤷');
 }
 
-if (message.channel.id === '602267275831017472') {
+if (message.channel.id === '666712746024239104') {
   setTimeout (function(){
       message.react('👎');
   }, 1000);
   
 }
 
-if (message.channel.id === '602267275831017472') {
+if (message.channel.id === '666712746024239104') {
 setTimeout (function(){
   message.react('🤷');
 }, 2000);
