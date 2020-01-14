@@ -184,7 +184,7 @@ if (message.content === "Join AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('524307136398753794');
+  message.member.addRole('666746477019791373');
   message.delete();
 }
 
@@ -193,7 +193,7 @@ if (message.content === "Leave AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('524307136398753794');
+  message.member.removeRole('666746477019791373');
   message.delete();
 }
 
@@ -202,7 +202,7 @@ if (message.content === "Join UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('524705965656899595');
+  message.member.addRole('666747045494915072');
   message.delete();
 }
 
@@ -211,7 +211,7 @@ if (message.content === "Leave UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('524705965656899595');
+  message.member.removeRole('666747045494915072');
   message.delete();
 }
 
