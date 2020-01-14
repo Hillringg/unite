@@ -53,17 +53,17 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
 
   let weeb = new Discord.RichEmbed()
-    .setAuthor("Kudos Bot", "https://i.imgur.com/bIqUl11.png")
+    .setAuthor("Kudos Bot", "https://i.imgur.com/iR0QCin.png")
 //    .setAuthor(member.guild.get("481104131080192010").avatarURL)
 //    .setAuthor(client.users.get("481104131080192010").avatarURL)
 //  .setAuthor(member.user.username, member.user.avatarURL)
   .setTitle('Greetings adventurers!')
   .setColor('#F5DEA4')
   .setThumbnail(`${member.user.avatarURL}`)
-  .setDescription(`Welcome to the official Shaiya Kudos Discord server, ${member.user.username}!
-Please make sure to read #rules-and-info.
+  .setDescription(`Welcome to the official Shaiya Wrath Discord server, ${member.user.username}!
+Please make sure to read #rules.
 If you have any questions do not hesitate to use the #support channel.`)
-  .setFooter('Shaiya Kudos')
+  .setFooter('Shaiya Wrath')
   .setTimestamp()
 
 channel.send(weeb);
