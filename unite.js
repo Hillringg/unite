@@ -255,4 +255,4 @@ if (msg.startsWith(prefix + 'MUTE')) {
 
 });
 ///////////////////////////////////////////////////////////////////////////////
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOTTOKEN);
