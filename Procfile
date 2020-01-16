@@ -1,1 +1,1 @@
-worker: node Kudos.js
+worker: node unite.js
