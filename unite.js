@@ -6,9 +6,21 @@ const prefix = "!";
 
 clbot.configure({botapi: "CC5ehFJkHVDXtn5xWK2FdJ1YfqA"});
 
+const activities_list = [
+  "ShaiyaUnite.org", 
+  "Don't forget to vote.",
+  "Assign your faction role in #role-assignment.", 
+  "Any questions? Please use the #support channel", 
+  ]; 
 
+client.on('ready', () => {
+  setInterval(function() {
+      const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); 
+      client.user.setActivity(activities_list[index]);
+  }, 10000);
   
-
+  console.log('Bot activated');
+});
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -28,10 +40,10 @@ client.on('guildMemberAdd', member => {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(`${member.user.avatarURL}`)
-      .addField('name : ', `${member}`)
-      .addField(' Welcome!', `Welcome to the server, ${member}`)
+      .addField(':bust_in_silhouette: | name : ', `${member}`)
+      .addField(':microphone2: | Welcome!', `Welcome to the server, ${member}`)
       .addField(':id: | User :', "**[" + `${member.id}` + "]**")
-      .addField('Is the member', `${member.guild.memberCount}`)
+      .addField(':family_mwgb: | You are the member', `${member.guild.memberCount}`)
       .addField("Name", `<@` + `${member.id}` + `>`, true)
       .addField('Server', `${member.guild.name}`, true)
       .setFooter(`${member.guild.name}`)
@@ -53,17 +65,17 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
 
   let weeb = new Discord.RichEmbed()
-    .setAuthor("Wrath Bot", "https://i.imgur.com/iR0QCin.png")
+    .setAuthor("Unite Bot", "https://i.imgur.com/oWBMCKP.png")
 //    .setAuthor(member.guild.get("481104131080192010").avatarURL)
 //    .setAuthor(client.users.get("481104131080192010").avatarURL)
 //  .setAuthor(member.user.username, member.user.avatarURL)
   .setTitle('Greetings adventurers!')
   .setColor('#F5DEA4')
   .setThumbnail(`${member.user.avatarURL}`)
-  .setDescription(`Welcome to the official Shaiya Wrath Discord server, ${member.user.username}!
-Please make sure to read #rules.
+  .setDescription(`Welcome to the official Shaiya Unite Discord server, ${member.user.username}!
+Please make sure to read #rules-and-info.
 If you have any questions do not hesitate to use the #support channel.`)
-  .setFooter('Shaiya Wrath')
+  .setFooter('Shaiya Unite')
   .setTimestamp()
 
 channel.send(weeb);
@@ -174,7 +186,7 @@ if (msg.startsWith(prefix + 'PURGE')) {
 
 // AUTO ROLES //
 
-if (message.channel.id === '666712705033568287') {
+if (message.channel.id === '524704820162985996') {
   message.delete();
 }
 
@@ -184,7 +196,7 @@ if (message.content === "Join AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('666746477019791373');
+  message.member.addRole('524307136398753794');
   message.delete();
 }
 
@@ -193,7 +205,7 @@ if (message.content === "Leave AoL") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('666746477019791373');
+  message.member.removeRole('524307136398753794');
   message.delete();
 }
 
@@ -202,7 +214,7 @@ if (message.content === "Join UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.addRole('666747045494915072');
+  message.member.addRole('524705965656899595');
   message.delete();
 }
 
@@ -211,27 +223,27 @@ if (message.content === "Leave UoF") {
   .then(message => {
   message.delete(10000)
   })
-  message.member.removeRole('666747045494915072');
+  message.member.removeRole('524705965656899595');
   message.delete();
 }
 
 // AUTO REACT //
 
 
-if (message.channel.id === '666712746024239104') {
+if (message.channel.id === '521796460698796043') {
   message.react('👍');
  // message.react('👎');
  // message.react('🤷');
 }
 
-if (message.channel.id === '666712746024239104') {
+if (message.channel.id === '521796460698796043') {
   setTimeout (function(){
       message.react('👎');
   }, 1000);
   
 }
 
-if (message.channel.id === '666712746024239104') {
+if (message.channel.id === '521796460698796043') {
 setTimeout (function(){
   message.react('🤷');
 }, 2000);
@@ -255,4 +267,5 @@ if (msg.startsWith(prefix + 'MUTE')) {
 
 });
 ///////////////////////////////////////////////////////////////////////////////
+
 client.login(process.env.BOTTOKEN);
