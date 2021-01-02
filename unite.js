@@ -4,7 +4,7 @@ const Cleverbot = require("cleverbot-node");
 const clbot = new Cleverbot;
 const prefix = "!";
 
-clbot.configure({botapi: "CC5ehFJkHVDXtn5xWK2FdJ1YfqA"});
+clbot.configure({botapi: "qSdW6hq7ZhnvqxoGfKsf2VYmaEDvIkH8"});
 
 
   
